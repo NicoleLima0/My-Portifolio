@@ -1,0 +1,92 @@
+.titleSkillsProjects {
+  margin-top: -1rem;
+  margin-bottom: 1.5rem;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+.cardProjects {
+  margin: 1rem;
+  align-items: center;
+  justify-content: center;
+}
+
+.cardsProjects {
+  justify-content: center;
+  align-items: center;
+  margin-left: 4rem;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  box-shadow: #303030;
+}
+
+.divCard {
+  margin-left: 1.5rem;
+  margin-top: 2rem;
+  margin-bottom: 3rem;
+  box-shadow: #303030;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.divCard2 {
+  margin-left: 1.5rem;
+  margin-top: 2rem;
+  margin-bottom: 3rem;
+  box-shadow: #303030;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.divCard3 {
+  margin-left: 1.5rem;
+  margin-top: 2rem;
+  margin-bottom: 3rem;
+  box-shadow: #303030;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.MuiPaper-root.MuiPaper-elevation.MuiPaper-rounded.MuiPaper-elevation1.MuiCard-root.cardProjects.css-1ri6ub7-MuiPaper-root-MuiCard-root {
+  background-color: #502d9d;
+}
+
+.picAfacil,
+.picApi,
+.picCrud {
+  width: 21.6rem;
+  height: 11.5rem;
+}
+
+.descricao {
+  color: white;
+}
+
+.iconHeartClick {
+  fill: rgb(211, 59, 59) !important;
+}
+
+@media screen and (max-width: 600px) {
+
+  .divCard,
+  .divCard2,
+  .divCard3 {
+    display: inline-grid;
+    margin-left: 0rem;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .cardsProjects {
+    display: inline-grid;
+    justify-content: center;
+    align-items: center;
+    margin-left: 0rem;
+  }
+}

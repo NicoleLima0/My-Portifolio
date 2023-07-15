@@ -1,0 +1,124 @@
+@import url("https://fonts.googleapis.com/css2?family=Inconsolata&family=Roboto:wght@400;700&display=swap");
+
+@keyframes logo_animate {
+  from {
+    opacity: 0;
+    margin-left: 100%;
+  }
+
+  to {
+    opacity: 1;
+    margin-right: 0;
+  }
+}
+
+@keyframes logo_animate2 {
+  from {
+    opacity: 0;
+    margin-left: 50%;
+  }
+
+  to {
+    opacity: 1;
+    margin-right: 5%;
+  }
+}
+.container {
+  display: flex;
+  flex-direction: column;
+}
+
+
+.title {
+  color: #fff;
+  margin-top: 9rem;
+  margin-left: 5rem;
+  font-size: 1.3rem;
+  font-family: "Inconsolata" !important;
+  animation-duration: 2.5s;
+  animation-name: logo_animate2;
+}
+
+.name {
+  color: #fff;
+  margin-top: 0.5rem;
+  margin-left: 5rem;
+  font-size: 2.3rem;
+  font-weight: bold;
+  animation-duration: 2.5s;
+  animation-name: logo_animate2;
+}
+
+.picture {
+  width: 17rem;
+  border-radius: 2rem;
+  margin-left: 8rem;
+  margin-top: -22rem;
+  animation-duration: 2.5s;
+  animation-name: logo_animate;
+}
+
+.subTitle {
+  float: left;
+  width: 50%;
+  color: #fff;
+  margin-left: 5rem;
+  margin-top: 1rem;
+  animation-duration: 2.5s;
+  animation-name: logo_animate2;
+}
+
+.subTitle2 {
+  margin-top: 1rem;
+  font-weight: bold;
+  font-size: 1.3rem;
+  color: #fff;
+  animation-duration: 2.5s;
+  animation-name: logo_animate2;
+  margin-bottom: 1rem;
+
+}
+
+.cardDiv {
+  float: right;
+  width: 50%;
+}
+
+
+@media screen and (max-width: 600px) {
+  .cardDiv {
+    display: none;
+  }
+}
+
+
+.cardProfile {
+  background-color: #fff;
+}
+
+.buttonCurriculo {
+  color: #fff;
+  cursor: pointer;
+  font-size: 1rem;
+  border-radius: 2rem;
+  width: 8rem;
+  height: 3rem;
+  background-color: transparent;
+  border-color: #3504a1;
+  background-image: -webkit-linear-gradient(45deg, #502d9d 50%, transparent 50%);
+  background-image: linear-gradient(45deg, #3504a1 50%, transparent 50%);
+  background-position: 100%;
+  background-size: 400%;
+  -webkit-transition: background 300ms ease-in-out;
+  transition: background 300ms ease-in-out;
+}
+
+.buttonCurriculo:hover {
+  background-position: 0;
+}
+
+.divButton {
+  float: left;
+  margin-left: 6rem;
+  margin-top: 2.3rem;
+}

@@ -1,0 +1,20 @@
+.toolbar {
+  background-color: #FFFF;
+  justify-content: flex-end;
+}
+
+header.MuiPaper-root.MuiPaper-elevation.MuiPaper-elevation4.MuiAppBar-root.MuiAppBar-colorPrimary.MuiAppBar-positionStaticcss-hip9hq-MuiPaper-root-MuiAppBar-root {
+  position: fixed;
+}
+
+.optionMenu {
+  background-color: #FFFF;
+  color: #2e1466;
+  padding: 10px;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+.optionMenu:hover {
+  opacity: 0.7;
+}

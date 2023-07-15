@@ -1,0 +1,166 @@
+.iptEmail {
+  background-color: transparent;
+  width: 20rem;
+}
+
+#outlined-multiline-static {
+  width: 31rem;
+}
+
+button#btn {
+  width: 13rem;
+  height: 3rem;
+  border: none;
+  outline: none;
+  background: #502d9d;
+  color: black;
+  font-size: 1rem;
+  border-radius: 5rem;
+  text-align: center;
+  box-shadow: 0 6px 20px -5px rgba(0, 0, 0, 0.4);
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  box-sizing: border-box;
+  margin-bottom: 1rem;
+}
+
+.checkBox {
+  width: 4rem;
+  height: 3rem;
+  border-radius: 40px;
+  box-shadow: 0 0 12px -2px rgba(0, 0, 0, 0.5);
+  position: absolute;
+  top: 0;
+  right: -40px;
+  opacity: 0;
+}
+
+.checkBox svg {
+  width: 40px;
+  margin: 20px;
+}
+
+button#btn.active {
+  background: #221449;
+  transition: 1s;
+}
+
+.active .checkBox {
+  right: 0;
+  opacity: 1;
+  transition: 1s;
+}
+
+.active p {
+  margin-right: 3rem;
+  transition: 1s;
+}
+
+.active svg path {
+  stroke-dashoffset: 0;
+  transition: 1s;
+  transition-delay: 1s;
+}
+
+.form {
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  margin: 1rem;
+}
+
+.titleContacts {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
+.subTitleContact {
+  margin: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icones {
+  display: grid;
+  left: 5rem;
+  position: absolute;
+}
+
+.iconesLinkedin {
+  padding: 1rem;
+  cursor: pointer;
+  background-color: #502d9d;
+  border-radius: 1rem;
+  margin: 1rem;
+}
+
+.iconesWhats {
+  padding: 1rem;
+  cursor: pointer;
+  background-color: #502d9d;
+  border-radius: 1rem;
+  margin: 1rem;
+}
+
+.iconesGithub {
+  padding: 1rem;
+  cursor: pointer;
+  background-color: #502d9d;
+  border-radius: 1rem;
+  margin: 1rem;
+}
+
+.completeForm {
+  flex: 1;
+}
+
+.containerForm {
+  display: flex;
+}
+
+.css-1d3z3hw-MuiOutlinedInput-notchedOutline {
+  border-color: white !important;
+}
+
+.css-14s5rfu-MuiFormLabel-root-MuiInputLabel-root {
+  color: white !important;
+}
+
+.css-1jy569b-MuiFormLabel-root-MuiInputLabel-root.Mui-focused {
+  color: white !important;
+}
+
+@media screen and (max-width: 800px) {
+  .containerForm {
+    flex-direction: column;
+  }
+
+  .completeForm {
+    width: 100%;
+  }
+
+  .todo {
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    display: inline-flex;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .icones {
+    display: inline-flex;
+    position: relative;
+    left: 0rem;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+.Toastify__toast-body>div:last-child {
+  color: black;
+
+}
