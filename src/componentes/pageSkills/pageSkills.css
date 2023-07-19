@@ -20,17 +20,21 @@
   color: #fff;
 }
 
+.css-1m5f78l {
+  background-color: #502d9d !important;
+}
+
 button.MuiButtonBase-root.MuiCardActionArea-root.css-1oitmrd-MuiButtonBase-root-MuiCardActionArea-root {
-  background-color: #502d9d!important;
+  background-color: #502d9d !important;
 }
 
 div.MuiCardMedia-root.mediaCard.css-16cvb1l-MuiCardMedia-root {
-  background-color: #fff!important;
+  background-color: #fff !important;
 }
 
 .pictureJs {
   width: 22rem;
-  height: 12rem;
+  height: 100%;
   margin-top: 0rem;
   border-radius: 0.2rem;
   object-fit: contain;
