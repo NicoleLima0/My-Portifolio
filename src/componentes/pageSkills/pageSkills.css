@@ -17,7 +17,7 @@
 }
 
 .textSkills {
-  color: #fff;
+  color: #fff !important;
 }
 
 .css-1m5f78l {
@@ -134,6 +134,13 @@ div.MuiCardMedia-root.mediaCard.css-16cvb1l-MuiCardMedia-root {
     display: inline-grid;
     justify-content: center;
     align-items: center;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .textSkills {
+    font-size: 1rem !important;
+    color: #fff !important;
   }
 }
 
