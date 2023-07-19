@@ -24,6 +24,18 @@
   background-color: #502d9d !important;
 }
 
+.css-w88nxk {
+  background-color: #502d9d !important;
+}
+
+.css-p0rm37 {
+  color: #fff !important;
+}
+
+.css-igs3ac {
+  border-color: #fff !important;
+}
+
 button.MuiButtonBase-root.MuiCardActionArea-root.css-1oitmrd-MuiButtonBase-root-MuiCardActionArea-root {
   background-color: #502d9d !important;
 }
@@ -34,7 +46,6 @@ div.MuiCardMedia-root.mediaCard.css-16cvb1l-MuiCardMedia-root {
 
 .pictureJs {
   width: 22rem;
-  height: 100%;
   margin-top: 0rem;
   border-radius: 0.2rem;
   object-fit: contain;
@@ -42,7 +53,7 @@ div.MuiCardMedia-root.mediaCard.css-16cvb1l-MuiCardMedia-root {
 
 .pictureSkills {
   width: 22rem;
-  height: 13rem;
+  background: white !important;
   margin-top: 0rem;
   border-radius: 0.2rem;
   object-fit: contain;
