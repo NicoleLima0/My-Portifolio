@@ -121,7 +121,7 @@ export default function PageProjects() {
                   <Typography paragraph>
                     Durante o desenvolvimento do projeto, o principal objetivo
                     foi criar uma experiência web única e totalmente responsiva
-                    que consite em um site para demonstração da empresa e venda
+                    que consiste em um site para demonstração da empresa e venda
                     de seguros, oferecendo aos visitantes a oportunidade de
                     conhecer melhor a empresa e entrar em contato. <br />
                     Através desse projeto sinto que consegui expandir meus
@@ -199,7 +199,7 @@ export default function PageProjects() {
                     integração da Weather Api, enfrentei desafios estimulantes
                     que me levaram a um aprendizado significativo. Fui desafiada
                     a entender a documentação da API, compreender seus endpoints
-                    e parâmetros, e aprender como interpretar e processar os
+                    e parâmetros, aprender como interpretar e processar os
                     dados recebidos. Essa experiência me proporcionou uma visão
                     mais aprofundada do trabalho com APIs, bem como me permitiu
                     desenvolver uma compreensão sólida sobre como consumir
