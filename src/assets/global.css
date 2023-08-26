@@ -6,6 +6,21 @@
   color: #fff;
 }
 
+/* :root {
+  --color-background: #202022;
+  --color-black: #212121;
+  --color-black-heavy: #000;
+  --color-text: #4f4f4f;
+  --color-text-out: #90908e;
+  --color-primary: #f28705;
+  --color-secondary: #ffa726;
+  --color-yellow: #fabb0d;
+  --color-white: #ffffff;
+  --color-red: #e74c3c;
+  --color-green: #2ecc71;
+  --color-separate: #cccccc;
+} */
+
 body {
   background-image: linear-gradient(to right, #684e9f 0, #684e9f 70%, #462196 30%);
 }
@@ -26,4 +41,8 @@ body {
   border-radius: 10px;
   -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
   background-color: #fff;
+}
+
+:target {
+  scroll-margin-top: 7em;
 }

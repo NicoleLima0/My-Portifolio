@@ -13,7 +13,7 @@ function App() {
       <PageSkills />
       <PageProjects />
       <ContactForm />
-      <Footer />
+      <Footer /> 
     </>
   );
 }

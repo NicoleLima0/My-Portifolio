@@ -8,12 +8,18 @@ import GitHubIcon from "@mui/icons-material/GitHub";
 import WhatsAppIcon from "@mui/icons-material/WhatsApp";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import WOW from "wow.js";
 
 export default function ContactForm() {
   const [state, handleSubmit] = useForm("xaygynkd");
   const [buttonClick, setButtonClick] = useState(false);
   const [valueInput, setValueInput] = useState("");
   const [valueInputMsg, setValueInputMsg] = useState("");
+
+  useEffect(() => {
+    const wow = new WOW();
+    wow.init();
+  }, []);
 
   useEffect(() => {
     const btn = document.querySelector("#btn");
@@ -59,16 +65,25 @@ export default function ContactForm() {
 
   return (
     <>
-      <div className="titleContacts">
+      <div
+        className="titleContacts wow animate__animated animate__fadeInUp"
+        data-wow-delay="0.2s"
+      >
         <h1>Contatos</h1>
       </div>
       <div>
-        <h3 className="subTitleContact">
+        <h3
+          className="subTitleContact wow animate__animated animate__fadeInUp"
+          data-wow-delay="0.4s"
+        >
           Entre em contato comigo, podemos crescer juntos!
         </h3>
       </div>
       <div className="containerForm" id="id-pageContact">
-        <div className="completeForm">
+        <div
+          className="completeForm wow animate__animated animate__fadeInUp"
+          data-wow-delay="0.6s"
+        >
           <ToastContainer />
           <form onSubmit={handleSubmit}>
             <div className="form">
@@ -118,7 +133,10 @@ export default function ContactForm() {
           </form>
         </div>
         <div className="todo">
-          <div className="icones">
+          <div
+            className="icones wow animate__animated animate__fadeIn"
+            data-wow-delay="0.8s"
+          >
             <LinkedInIcon
               onClick={clickLinkedin}
               className="iconesLinkedin"
@@ -126,12 +144,12 @@ export default function ContactForm() {
             />
             <GitHubIcon
               onClick={clickGithub}
-              className="iconesGithub"
+              className="iconesGithub "
               fontSize="large"
             />
             <WhatsAppIcon
               onClick={clickWhats}
-              className="iconesWhats"
+              className="iconesWhats "
               fontSize="large"
             />
           </div>

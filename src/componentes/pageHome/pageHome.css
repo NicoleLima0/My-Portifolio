@@ -1,42 +1,61 @@
 @import url("https://fonts.googleapis.com/css2?family=Inconsolata&family=Roboto:wght@400;700&display=swap");
 
-@keyframes logo_animate {
-  from {
-    opacity: 0;
-    margin-left: 100%;
-  }
-
-  to {
-    opacity: 1;
-    margin-right: 0;
-  }
-}
-
-@keyframes logo_animate2 {
-  from {
-    opacity: 0;
-    margin-left: 50%;
-  }
-
-  to {
-    opacity: 1;
-    margin-right: 5%;
-  }
-}
-.container {
+.container-pageHome {
+  margin-top: 10rem;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
 }
 
+.cardDiv {
+
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  box-sizing: border-box;
+
+}
+
+.cardDiv img {
+  max-width: 100%;
+  max-height: 100%;
+  border-radius: 3rem;  
+  border: 0.4rem solid white; 
+}
+
+
+.container,
+.cardDiv {
+  width: 50%;
+  padding: 20px;
+  box-sizing: border-box;
+}
 
 .title {
   color: #fff;
-  margin-top: 9rem;
   margin-left: 5rem;
   font-size: 1.3rem;
   font-family: "Inconsolata" !important;
-  animation-duration: 2.5s;
-  animation-name: logo_animate2;
+}
+
+.subTitle {
+  float: left;
+  color: #fff;
+  margin-left: 5rem;
+  margin-top: 1rem;
+}
+
+.subTitle2 {
+  margin-top: 1rem;
+  font-weight: bold;
+  font-size: 1.3rem;
+  color: #fff;
+  margin-bottom: 1rem;
+
 }
 
 .name {
@@ -45,55 +64,6 @@
   margin-left: 5rem;
   font-size: 2.3rem;
   font-weight: bold;
-  animation-duration: 2.5s;
-  animation-name: logo_animate2;
-}
-
-.picture {
-  width: 17rem;
-  border-radius: 2rem;
-  margin-left: 8rem;
-  margin-top: -22rem;
-  animation-duration: 2.5s;
-  animation-name: logo_animate;
-}
-
-.subTitle {
-  float: left;
-  width: 50%;
-  color: #fff;
-  margin-left: 5rem;
-  margin-top: 1rem;
-  animation-duration: 2.5s;
-  animation-name: logo_animate2;
-}
-
-.subTitle2 {
-  margin-top: 1rem;
-  font-weight: bold;
-  font-size: 1.3rem;
-  color: #fff;
-  animation-duration: 2.5s;
-  animation-name: logo_animate2;
-  margin-bottom: 1rem;
-
-}
-
-.cardDiv {
-  float: right;
-  width: 50%;
-}
-
-
-@media screen and (max-width: 600px) {
-  .cardDiv {
-    display: none;
-  }
-}
-
-
-.cardProfile {
-  background-color: #fff;
 }
 
 .buttonCurriculo {
@@ -119,6 +89,49 @@
 
 .divButton {
   float: left;
-  margin-left: 6rem;
+  margin-left: 5rem;
   margin-top: 2.3rem;
+}
+
+@media (min-width: 1200px) {
+  .container-pageHome {
+   margin-top: 4rem;
+  }
+}
+
+@media (min-width: 1400px) {
+  .container-pageHome {
+   margin-top: 10rem;
+  }
+  
+}
+
+@media (max-width: 768px) {
+  .container-pageHome {
+    flex-direction: column;
+  }
+
+  .container .title {
+    text-align: center;
+    margin-left: 0;
+  }
+
+  .container .subTitle {
+    margin-left: 0;
+  }
+
+  .container .name {
+    margin-left: 0;
+    text-align: center;
+  }
+
+  .container-pageHome {
+    margin-top: 4rem;
+    padding: 2.5rem;
+  }
+
+  .container,
+  .cardDiv {
+    width: 100%;
+  }
 }

@@ -4,12 +4,18 @@ import Box from "@mui/material/Box";
 import Toolbar from "@mui/material/Toolbar";
 import "./navBar.css";
 import { useEffect, useState } from "react";
+import WOW from "wow.js";
 
 export default function NavBar() {
   const [scrolltoDivHome, setScrolltoDivHome] = useState(false);
   const [scrolltoDivContact, setScrolltoDivContact] = useState(false);
   const [scrolltoDivProjects, setScrolltoDivProjects] = useState(false);
   const [scrolltoDivHardSkills, setScrolltoDivHardSkills] = useState(false);
+
+  useEffect(() => {
+    const wow = new WOW();
+    wow.init();
+  }, []);
 
   useEffect(() => {
     if (scrolltoDivHome === true) {
@@ -63,16 +69,32 @@ export default function NavBar() {
     <Box sx={{ flexGrow: 1 }}>
       <AppBar position="fixed">
         <Toolbar className="toolbar">
-          <div className="optionMenu" onClick={goHome}>
+          <div
+            className="optionMenu wow animate__animated animate__fadeIn"
+            data-wow-delay="0.2s"
+            onClick={goHome}
+          >
             Home
           </div>
-          <div className="optionMenu" onClick={goContact}>
+          <div
+            className="optionMenu wow animate__animated animate__fadeIn"
+            data-wow-delay="0.4s"
+            onClick={goContact}
+          >
             Contatos
           </div>
-          <div className="optionMenu" onClick={goProjects}>
+          <div
+            className="optionMenu wow animate__animated animate__fadeIn"
+            data-wow-delay="0.6s"
+            onClick={goProjects}
+          >
             Meus projetos
           </div>
-          <div className="optionMenu" onClick={goSkills}>
+          <div
+            className="optionMenu wow animate__animated animate__fadeIn"
+            data-wow-delay="0.8s"
+            onClick={goSkills}
+          >
             Minhas hard skills
           </div>
         </Toolbar>

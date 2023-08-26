@@ -15,6 +15,8 @@ import imgAfacil from "../../assets/images/afacil.png";
 import imgApi from "../../assets/images/API.png";
 import imgCrud from "../../assets/images/CRUD.png";
 import OpenInNewIcon from "@mui/icons-material/OpenInNew";
+import { useEffect } from "react";
+import WOW from "wow.js";
 
 export default function PageProjects() {
   const [expanded, setExpanded] = React.useState(false);
@@ -26,6 +28,11 @@ export default function PageProjects() {
   const urlAfacil = "https://afacil-seguros.vercel.app/";
   const urlApi = "https://integracao-de-api.vercel.app/";
   const urlCrud = "https://to-do-list-nicolelima0.vercel.app/";
+
+  useEffect(() => {
+    const wow = new WOW();
+    wow.init();
+  }, []);
 
   const handleExpandClick = () => {
     setExpanded(!expanded);
@@ -77,11 +84,17 @@ export default function PageProjects() {
   return (
     <>
       <div id="id-projects">
-        <div className="titleSkillsProjects">
+        <div
+          className="titleSkillsProjects wow animate__animated animate__fadeInUp"
+          data-wow-delay="0.2s"
+        >
           <h1> Meus Projetos </h1>
         </div>
         <div className="cardsProjects">
-          <div className="divCard">
+          <div
+            className="divCard wow animate__animated animate__fadeInUp"
+            data-wow-delay="0.4s"
+          >
             <Card sx={{ maxWidth: 345 }} className="cardProjects">
               <CardHeader title="Projeto AFACIL" />
               <CardMedia>
@@ -147,7 +160,10 @@ export default function PageProjects() {
               </Collapse>
             </Card>
           </div>
-          <div className="divCard2">
+          <div
+            className="divCard2 wow animate__animated animate__fadeInUp"
+            data-wow-delay="0.6s"
+          >
             <Card sx={{ maxWidth: 345 }} className="cardProjects">
               <CardHeader title="Projeto Integração de API" />
               <CardMedia>
@@ -199,9 +215,9 @@ export default function PageProjects() {
                     integração da Weather Api, enfrentei desafios estimulantes
                     que me levaram a um aprendizado significativo. Fui desafiada
                     a entender a documentação da API, compreender seus endpoints
-                    e parâmetros, aprender como interpretar e processar os
-                    dados recebidos. Essa experiência me proporcionou uma visão
-                    mais aprofundada do trabalho com APIs, bem como me permitiu
+                    e parâmetros, aprender como interpretar e processar os dados
+                    recebidos. Essa experiência me proporcionou uma visão mais
+                    aprofundada do trabalho com APIs, bem como me permitiu
                     desenvolver uma compreensão sólida sobre como consumir
                     informações externas em meus projetos.
                   </Typography>
@@ -209,7 +225,10 @@ export default function PageProjects() {
               </Collapse>
             </Card>
           </div>
-          <div className="divCard3">
+          <div
+            className="divCard3 wow animate__animated animate__fadeInUp"
+            data-wow-delay="0.8s"
+          >
             <Card sx={{ maxWidth: 345 }} className="cardProjects">
               <CardHeader title="Projeto CRUD" />
               <CardMedia>

@@ -164,3 +164,9 @@ button#btn.active {
   color: black;
 
 }
+
+@media screen and (min-width: 1400px) {
+  .MuiFormControl-root.MuiTextField-root.css-1u3bzj6-MuiFormControl-root-MuiTextField-root{
+    width: 56rem;
+  }
+}

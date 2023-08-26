@@ -9,16 +9,30 @@ import imgHtml from "../../assets/images/html.png";
 import imgCss from "../../assets/images/css.png";
 import imgSQL from "../../assets/images/SQL.png";
 import imgGit from "../../assets/images/Git.png";
+import { useEffect } from "react";
+import WOW from "wow.js";
 
 export default function PageSkills() {
+  useEffect(() => {
+    const wow = new WOW();
+    wow.init();
+  }, []);
+
   return (
     <>
-      <div className="titleSkills" id="id-skills">
+      <div
+        className="titleSkills wow animate__animated animate__fadeInUp"
+        data-wow-delay="0.2s"
+        id="id-skills"
+      >
         <h1> Minhas hard skills </h1>
       </div>
       <div className="skillsComplete">
         <div className="cardSkills">
-          <div className="js">
+          <div
+            className="js wow animate__animated animate__fadeInUp"
+            data-wow-delay="0.4s"
+          >
             <Card sx={{ maxWidth: 345 }} className="card">
               <CardActionArea>
                 <CardMedia className="mediaCard">
@@ -35,7 +49,10 @@ export default function PageSkills() {
               </CardActionArea>
             </Card>
           </div>
-          <div className="react">
+          <div
+            className="react wow animate__animated animate__fadeInUp"
+            data-wow-delay="0.6s"
+          >
             <Card sx={{ maxWidth: 345 }} className="card">
               <CardActionArea>
                 <CardMedia className="mediaCard">
@@ -51,7 +68,10 @@ export default function PageSkills() {
               </CardActionArea>
             </Card>
           </div>
-          <div className="sql">
+          <div
+            className="sql wow animate__animated animate__fadeInUp"
+            data-wow-delay="0.8s"
+          >
             <Card sx={{ maxWidth: 345 }} className="card">
               <CardActionArea>
                 <CardMedia className="mediaCard">
@@ -70,7 +90,10 @@ export default function PageSkills() {
           </div>
         </div>
         <div className="cardSkills2">
-          <div className="html">
+          <div
+            className="html wow animate__animated animate__fadeInUp"
+            data-wow-delay="1s"
+          >
             <Card sx={{ maxWidth: 345 }} className="card">
               <CardActionArea>
                 <CardMedia className="mediaCard">
@@ -87,7 +110,10 @@ export default function PageSkills() {
               </CardActionArea>
             </Card>
           </div>
-          <div className="css">
+          <div
+            className="css wow animate__animated animate__fadeInUp"
+            data-wow-delay="1.2s"
+          >
             <Card sx={{ maxWidth: 345 }} className="card">
               <CardActionArea>
                 <CardMedia className="mediaCard">
@@ -104,7 +130,10 @@ export default function PageSkills() {
               </CardActionArea>
             </Card>
           </div>
-          <div className="git">
+          <div
+            className="git wow animate__animated animate__fadeInUp"
+            data-wow-delay="1.4s"
+          >
             <Card sx={{ maxWidth: 345 }} className="card">
               <CardActionArea>
                 <CardMedia className="mediaCard">
