@@ -46,3 +46,7 @@ body {
 :target {
   scroll-margin-top: 7em;
 }
+
+html {
+  scroll-behavior: smooth;
+}

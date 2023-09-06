@@ -83,6 +83,7 @@ export default function PageProjects() {
 
   return (
     <>
+    <div id="pageProjects">
       <div id="id-projects">
         <div
           className="titleSkillsProjects wow animate__animated animate__fadeInUp"
@@ -292,6 +293,7 @@ export default function PageProjects() {
           </div>
         </div>
       </div>
+    </div>
     </>
   );
 }

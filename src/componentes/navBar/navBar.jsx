@@ -1,104 +1,75 @@
-/* import * as React from "react"; */
-import AppBar from "@mui/material/AppBar";
-import Box from "@mui/material/Box";
-import Toolbar from "@mui/material/Toolbar";
 import "./navBar.css";
 import { useEffect, useState } from "react";
 import WOW from "wow.js";
 
 export default function NavBar() {
-  const [scrolltoDivHome, setScrolltoDivHome] = useState(false);
-  const [scrolltoDivContact, setScrolltoDivContact] = useState(false);
-  const [scrolltoDivProjects, setScrolltoDivProjects] = useState(false);
-  const [scrolltoDivHardSkills, setScrolltoDivHardSkills] = useState(false);
+  const [active, setActive] = useState("nav__menu");
+  const [toggleIcon, setToggleIcon] = useState("nav__toggler");
+
+  const navToggle = () => {
+    setActive(active === "nav__menu" ? "nav__menu nav__active" : "nav__menu");
+    setToggleIcon(toggleIcon === "nav__toggler" ? "nav__toggler toggle" : "nav__toggler");
+  };
+
+  const closeNav = () => {
+    setActive("nav__menu");
+    setToggleIcon("nav__toggler");
+  };
 
   useEffect(() => {
     const wow = new WOW();
     wow.init();
   }, []);
 
-  useEffect(() => {
-    if (scrolltoDivHome === true) {
-      const divDestinoHome = document.getElementById("id-pageHome");
-      divDestinoHome.scrollIntoView({ behavior: "smooth" });
-      setScrolltoDivHome(false);
-    }
-  }, [scrolltoDivHome]);
-
-  useEffect(() => {
-    if (scrolltoDivContact === true) {
-      const divDestinoContact = document.getElementById("id-pageContact");
-      divDestinoContact.scrollIntoView({ behavior: "smooth" });
-      setScrolltoDivContact(false);
-    }
-  }, [scrolltoDivContact]);
-
-  useEffect(() => {
-    if (scrolltoDivProjects === true) {
-      const divDestinoProjects = document.getElementById("id-projects");
-      divDestinoProjects.scrollIntoView({ behavior: "smooth" });
-      setScrolltoDivProjects(false);
-    }
-  }, [scrolltoDivProjects]);
-
-  useEffect(() => {
-    if (scrolltoDivHardSkills === true) {
-      const divDestinoHardSkills = document.getElementById("id-skills");
-      divDestinoHardSkills.scrollIntoView({ behavior: "smooth" });
-      setScrolltoDivHardSkills(false);
-    }
-  }, [scrolltoDivHardSkills]);
-
-  function goHome() {
-    setScrolltoDivHome(true);
-  }
-
-  function goContact() {
-    setScrolltoDivContact(true);
-  }
-
-  function goProjects() {
-    setScrolltoDivProjects(true);
-  }
-
-  function goSkills() {
-    setScrolltoDivHardSkills(true);
-  }
-
   return (
-    <Box sx={{ flexGrow: 1 }}>
-      <AppBar position="fixed">
-        <Toolbar className="toolbar">
-          <div
-            className="optionMenu wow animate__animated animate__fadeIn"
+    <nav className="nav">
+      <ul className={active}>
+        <li className="nav__item">
+          <a
+            href="#pageHome"
+            className="optionMenu logo wow animate__animated animate__fadeIn"
             data-wow-delay="0.2s"
-            onClick={goHome}
+            onClick={closeNav}
           >
             Home
-          </div>
-          <div
+          </a>
+        </li>
+        <li className="nav__item">
+          <a
+            href="#contactForm"
             className="optionMenu wow animate__animated animate__fadeIn"
             data-wow-delay="0.4s"
-            onClick={goContact}
+            onClick={closeNav}
           >
             Contatos
-          </div>
-          <div
+          </a>
+        </li>
+        <li className="nav__item">
+          <a
+            href="#pageProjects"
             className="optionMenu wow animate__animated animate__fadeIn"
             data-wow-delay="0.6s"
-            onClick={goProjects}
+            onClick={closeNav}
           >
             Meus projetos
-          </div>
-          <div
+          </a>
+        </li>
+        <li className="nav__item">
+          <a
+            href="#pageSkills"
             className="optionMenu wow animate__animated animate__fadeIn"
             data-wow-delay="0.8s"
-            onClick={goSkills}
+            onClick={closeNav}
           >
             Minhas hard skills
-          </div>
-        </Toolbar>
-      </AppBar>
-    </Box>
+          </a>
+        </li>
+      </ul>
+      <div className={toggleIcon} onClick={navToggle}>
+        <div className="line1"></div>
+        <div className="line2"></div>
+        <div className="line3"></div>
+      </div>
+    </nav>
   );
 }

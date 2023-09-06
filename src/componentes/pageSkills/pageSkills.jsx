@@ -20,6 +20,7 @@ export default function PageSkills() {
 
   return (
     <>
+    <div id="pageSkills">
       <div
         className="titleSkills wow animate__animated animate__fadeInUp"
         data-wow-delay="0.2s"
@@ -150,6 +151,7 @@ export default function PageSkills() {
             </Card>
           </div>
         </div>
+      </div>
       </div>
     </>
   );

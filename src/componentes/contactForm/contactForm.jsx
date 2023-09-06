@@ -65,6 +65,7 @@ export default function ContactForm() {
 
   return (
     <>
+    <div id="contactForm">
       <div
         className="titleContacts wow animate__animated animate__fadeInUp"
         data-wow-delay="0.2s"
@@ -155,6 +156,8 @@ export default function ContactForm() {
           </div>
         </div>
       </div>
+    </div>
+  <div/>
     </>
   );
 }

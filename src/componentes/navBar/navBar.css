@@ -1,10 +1,16 @@
-.toolbar {
-  background-color: #FFFF;
-  justify-content: flex-end;
+
+li {
+  list-style: none;
+  margin-right: 1.563rem !important;
 }
 
-header.MuiPaper-root.MuiPaper-elevation.MuiPaper-elevation4.MuiAppBar-root.MuiAppBar-colorPrimary.MuiAppBar-positionStaticcss-hip9hq-MuiPaper-root-MuiAppBar-root {
-  position: fixed!important;
+a {
+  text-decoration: none !important;
+  color: #2e1466 !important;
+}
+
+a:hover {
+  color: blue !important;
 }
 
 .optionMenu {
@@ -17,4 +23,78 @@ header.MuiPaper-root.MuiPaper-elevation.MuiPaper-elevation4.MuiAppBar-root.MuiAp
 
 .optionMenu:hover {
   opacity: 0.7;
+}
+
+.nav {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-around !important;
+  height: 4rem !important;
+  background:white!important;
+  position: fixed;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  margin-top: -4rem;
+}
+
+.nav__menu {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-around !important;
+  gap: 3rem !important;
+}
+
+.nav__toggler div {
+  width: 2.5rem !important;
+  height: 0.2rem !important;
+  margin: 0.4rem !important;
+  background: black !important;
+  transition: 0.4s ease-in !important;
+  align-items: flex-end;
+  justify-content: flex-end;
+  display: flex;
+}
+
+.nav__toggler {
+  cursor: pointer !important;
+  display: none !important;
+}
+
+@media screen and (max-width: 768px) {
+  .nav__toggler {
+      display: block !important;
+      margin-left: 19rem;
+  }
+
+  .nav__menu {
+      position: fixed !important;
+      top: 4rem !important;
+      right: 0 !important;
+      width: 100% !important;
+      height: 50vh !important;
+      background: white !important;
+      flex-direction: column !important;
+      transform: translateX(100%) !important;
+      transition: 0.5s ease-in !important;
+  }
+}
+
+.nav__active {
+  transform: translateX(0) !important;
+}
+
+.toggle .line1 {
+  color: black;
+  transform: rotate(-45deg) translate(-8px, 10px) !important;
+}
+
+.toggle .line2 {
+  color: black;
+  opacity: 0 !important;
+}
+
+.toggle .line3 {
+  color: black;
+  transform: rotate(45deg) translate(-4px, -5px) !important;
 }
