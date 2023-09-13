@@ -9,6 +9,9 @@ import WhatsAppIcon from "@mui/icons-material/WhatsApp";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import WOW from "wow.js";
+import React, { useContext } from 'react';
+import { ThemeContext } from 'styled-components'; 
+import theme from '../theme';
 
 export default function ContactForm() {
   const [state, handleSubmit] = useForm("xaygynkd");
@@ -20,6 +23,12 @@ export default function ContactForm() {
     const wow = new WOW();
     wow.init();
   }, []);
+
+  const themeContext = useContext(ThemeContext); 
+  const isDarkMode = themeContext === theme.dark; 
+
+  const skillsButtonStyle = {
+    backgroundColor: isDarkMode ? 'rgb(99, 0, 99)' : '#502d9d', };
 
   useEffect(() => {
     const btn = document.querySelector("#btn");
@@ -122,7 +131,7 @@ export default function ContactForm() {
               />
             </div>
             <div className="form">
-              <button type="submit" id="btn">
+              <button type="submit" id="btn" style={skillsButtonStyle}>
                 <p id="btnText">Enviar</p>
                 <div className="checkBox">
                   <CheckIcon viewBox="0 0 50 50">
@@ -142,16 +151,19 @@ export default function ContactForm() {
               onClick={clickLinkedin}
               className="iconesLinkedin"
               fontSize="large"
+              style={skillsButtonStyle}
             />
             <GitHubIcon
               onClick={clickGithub}
               className="iconesGithub "
               fontSize="large"
+              style={skillsButtonStyle}
             />
             <WhatsAppIcon
               onClick={clickWhats}
               className="iconesWhats "
               fontSize="large"
+              style={skillsButtonStyle}
             />
           </div>
         </div>

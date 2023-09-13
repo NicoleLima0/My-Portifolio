@@ -2,13 +2,15 @@ import "./navBar.css";
 import { useEffect, useState } from "react";
 import WOW from "wow.js";
 
-export default function NavBar() {
+export default function NavBar({ isDarkMode, setIsDarkMode }) {
   const [active, setActive] = useState("nav__menu");
   const [toggleIcon, setToggleIcon] = useState("nav__toggler");
 
   const navToggle = () => {
     setActive(active === "nav__menu" ? "nav__menu nav__active" : "nav__menu");
-    setToggleIcon(toggleIcon === "nav__toggler" ? "nav__toggler toggle" : "nav__toggler");
+    setToggleIcon(
+      toggleIcon === "nav__toggler" ? "nav__toggler toggle" : "nav__toggler"
+    );
   };
 
   const closeNav = () => {
@@ -23,6 +25,17 @@ export default function NavBar() {
 
   return (
     <nav className="nav">
+      <div>
+          <input
+            // id={props.id}
+            className="theme-switch"
+            type="checkbox"
+            onChange={(e) => {
+              setIsDarkMode(e.target.checked);
+            }}
+            checked={isDarkMode}
+          />
+        </div>
       <ul className={active}>
         <li className="nav__item">
           <a

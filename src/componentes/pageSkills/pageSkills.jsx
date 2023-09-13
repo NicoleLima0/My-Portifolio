@@ -11,12 +11,22 @@ import imgSQL from "../../assets/images/SQL.png";
 import imgGit from "../../assets/images/Git.png";
 import { useEffect } from "react";
 import WOW from "wow.js";
+import React, { useContext } from 'react';
+import { ThemeContext } from 'styled-components'; 
+import theme from '../theme';
 
 export default function PageSkills() {
   useEffect(() => {
     const wow = new WOW();
     wow.init();
   }, []);
+
+  const themeContext = useContext(ThemeContext); 
+  const isDarkMode = themeContext === theme.dark; 
+
+  const skillsContainerStyle = {
+    backgroundColor: isDarkMode ? 'rgb(99, 0, 99)' : '#502d9d', };
+  
 
   return (
     <>
@@ -39,7 +49,7 @@ export default function PageSkills() {
                 <CardMedia className="mediaCard">
                   <img src={imgJs} alt="Javascript" className="pictureJs" />
                 </CardMedia>
-                <CardContent>
+                <CardContent style={skillsContainerStyle}>
                   <div className="skillsTitle">JavaScript</div>
                   <div className="textSkills">
                     Desenvolvimento Web Front-End - <br /> Manipulação do DOM -
@@ -59,7 +69,7 @@ export default function PageSkills() {
                 <CardMedia className="mediaCard">
                   <img src={imgReact} alt="React" className="pictureSkills" />
                 </CardMedia>
-                <CardContent>
+                <CardContent style={skillsContainerStyle}>
                   <div className="skillsTitle">React</div>
                   <div className="textSkills">
                     Ferramentas de Desenvolvimento - Desenvolvimento de
@@ -78,7 +88,7 @@ export default function PageSkills() {
                 <CardMedia className="mediaCard">
                   <img src={imgSQL} alt="SQL" className="pictureSkills" />
                 </CardMedia>
-                <CardContent>
+                <CardContent style={skillsContainerStyle}>
                   <div className="skillsTitle">SQL</div>
                   <div className="textSkills">
                     {" "}
@@ -100,7 +110,7 @@ export default function PageSkills() {
                 <CardMedia className="mediaCard">
                   <img src={imgHtml} alt="HTML" className="pictureSkills" />
                 </CardMedia>
-                <CardContent>
+                <CardContent style={skillsContainerStyle}>
                   <div className="skillsTitle">HTML</div>
                   <div className="textSkills">
                     Organização Lógica e Semântica - Acessibilidade Web -
@@ -120,7 +130,7 @@ export default function PageSkills() {
                 <CardMedia className="mediaCard">
                   <img src={imgCss} alt="CSS" className="pictureSkills" />
                 </CardMedia>
-                <CardContent>
+                <CardContent style={skillsContainerStyle}>
                   <div className="skillsTitle">CSS</div>
                   <div className="textSkills">
                     Criação de layouts responsivos - Design Visual -
@@ -140,7 +150,7 @@ export default function PageSkills() {
                 <CardMedia className="mediaCard">
                   <img src={imgGit} alt="Git" className="pictureSkills" />
                 </CardMedia>
-                <CardContent>
+                <CardContent style={skillsContainerStyle}>
                   <div className="skillsTitle">GIT</div>
                   <div className="textSkills">
                     Controle de Versões - Branchs e Merges - Repositórios

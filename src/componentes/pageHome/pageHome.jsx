@@ -1,7 +1,11 @@
 import "./pageHome.css";
 import imgProfile from "../../assets/images/Nicole.jpg";
+import React, { useContext } from 'react';
 import { useEffect } from "react";
 import WOW from "wow.js";
+import { ThemeContext } from "styled-components";
+import theme from '../theme';
+
 
 export default function PageHome() {
   const curriculoPDF =
@@ -15,6 +19,12 @@ export default function PageHome() {
     const wow = new WOW();
     wow.init();
   }, []);
+
+  const themeContext = useContext(ThemeContext); 
+  const isDarkMode = themeContext === theme.dark; 
+
+  const skillsButtonStyle = {
+    backgroundColor: isDarkMode ? 'rgb(99, 0, 99)' : '#502d9d', };
 
   return (
     <>
@@ -42,12 +52,12 @@ export default function PageHome() {
               todo.
             </div>
             <div className="divButton">
-              <button onClick={redirectCurriculo} className="buttonCurriculo">
+              <button onClick={redirectCurriculo} className="buttonCurriculo" style={skillsButtonStyle}>
                 <span>Ver currículo</span>
               </button>
             </div>
           </div>
-          <div className="cardDiv wow animate__animated animate__fadeInRight">
+          <div className="cardDiv wow animate__animated animate__fadeInUp">
             <img src={imgProfile} alt="profile" />
           </div>
         </div>

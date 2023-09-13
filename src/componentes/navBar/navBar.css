@@ -1,4 +1,3 @@
-
 li {
   list-style: none;
   margin-right: 1.563rem !important;
@@ -30,7 +29,7 @@ a:hover {
   align-items: center !important;
   justify-content: space-around !important;
   height: 4rem !important;
-  background:white!important;
+  background: white !important;
   position: fixed;
   left: 0;
   width: 100%;
@@ -46,14 +45,14 @@ a:hover {
 }
 
 .nav__toggler div {
-  width: 2.5rem !important;
-  height: 0.2rem !important;
+  width: 2rem !important;
+  height: 0.1rem !important;
   margin: 0.4rem !important;
   background: black !important;
   transition: 0.4s ease-in !important;
-  align-items: flex-end;
-  justify-content: flex-end;
-  display: flex;
+  align-items: flex-end !important;
+  justify-content: flex-end !important;
+  display: flex !important;
 }
 
 .nav__toggler {
@@ -63,20 +62,20 @@ a:hover {
 
 @media screen and (max-width: 768px) {
   .nav__toggler {
-      display: block !important;
-      margin-left: 19rem;
+    display: block !important;
+    margin-left: 19rem;
   }
 
   .nav__menu {
-      position: fixed !important;
-      top: 4rem !important;
-      right: 0 !important;
-      width: 100% !important;
-      height: 50vh !important;
-      background: white !important;
-      flex-direction: column !important;
-      transform: translateX(100%) !important;
-      transition: 0.5s ease-in !important;
+    position: fixed !important;
+    top: 4rem !important;
+    right: 0 !important;
+    width: 100% !important;
+    height: 50vh !important;
+    background: white !important;
+    flex-direction: column !important;
+    transform: translateX(100%) !important;
+    transition: 0.5s ease-in !important;
   }
 }
 
@@ -96,5 +95,55 @@ a:hover {
 
 .toggle .line3 {
   color: black;
-  transform: rotate(45deg) translate(-4px, -5px) !important;
+  transform: rotate(45deg) translate(-2px, -3px) !important;
+}
+
+.theme-switch {
+  appearance: none;
+  width: 49px;
+  height: 28px;
+  display: inline-block;
+  position: relative;
+  border-radius: 50px;
+  overflow: hidden;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  background: #ffffff;
+  transition: background-color ease 0.3s;
+}
+
+.theme-switch::before {
+  content: url('../../assets/svg/moon.svg');
+  display: block;
+  position: absolute;
+  z-index: 2;
+  width: 25px; 
+  height: 29px;
+  background: white;
+  left: -1px;
+  top: 0px;
+  border-radius: 50%;
+  text-indent: 2px;
+  line-height: 28px;
+  word-spacing: 37px;
+  color: #000000;
+  white-space: nowrap;
+  transition: all cubic-bezier(0.3, 1, 0.7, 1) 0.3s;
+  align-items: center; 
+}
+
+.theme-switch:checked {
+  background-color: #ffffff;
+  border-color: #ffffff;
+  align-items: center; 
+}
+
+.theme-switch:checked::before {
+  left: 23px;
+  content: url('../../assets/svg/sun.svg');
+  background:#ffffff;
+  align-items: center; 
+  display: flex;
+  justify-content: center;
 }

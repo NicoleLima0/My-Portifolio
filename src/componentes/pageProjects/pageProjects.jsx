@@ -17,6 +17,9 @@ import imgCrud from "../../assets/images/CRUD.png";
 import OpenInNewIcon from "@mui/icons-material/OpenInNew";
 import { useEffect } from "react";
 import WOW from "wow.js";
+import { useContext } from 'react';
+import { ThemeContext } from 'styled-components'; 
+import theme from '../theme';
 
 export default function PageProjects() {
   const [expanded, setExpanded] = React.useState(false);
@@ -33,6 +36,12 @@ export default function PageProjects() {
     const wow = new WOW();
     wow.init();
   }, []);
+
+  const themeContext = useContext(ThemeContext); 
+  const isDarkMode = themeContext === theme.dark; 
+
+  const skillsContainerStyle = {
+    backgroundColor: isDarkMode ? 'rgb(99, 0, 99)' : '#502d9d', };
 
   const handleExpandClick = () => {
     setExpanded(!expanded);
@@ -97,11 +106,11 @@ export default function PageProjects() {
             data-wow-delay="0.4s"
           >
             <Card sx={{ maxWidth: 345 }} className="cardProjects">
-              <CardHeader title="Projeto AFACIL" />
-              <CardMedia>
+              <CardHeader title="Projeto AFACIL" style={skillsContainerStyle}/>
+              <CardMedia style={skillsContainerStyle}>
                 <img src={imgAfacil} className="picAfacil" alt="AFACIL" />
               </CardMedia>
-              <CardContent>
+              <CardContent style={skillsContainerStyle}>
                 <div className="descricao">
                   <p>
                     Meu primeiro projeto, um site para corretora de seguros
@@ -109,7 +118,7 @@ export default function PageProjects() {
                   </p>
                 </div>
               </CardContent>
-              <CardActions disableSpacing>
+              <CardActions disableSpacing style={skillsContainerStyle}>
                 <IconButton aria-label="add to favorites" onClick={changeColor}>
                   <FavoriteIcon
                     className={iconClicked ? "iconHeartClick" : ""}
@@ -131,7 +140,7 @@ export default function PageProjects() {
                 </ExpandMore>
               </CardActions>
               <Collapse in={expanded} timeout="auto" unmountOnExit>
-                <CardContent>
+                <CardContent style={skillsContainerStyle}>
                   <Typography paragraph>
                     Durante o desenvolvimento do projeto, o principal objetivo
                     foi criar uma experiência web única e totalmente responsiva
@@ -166,11 +175,11 @@ export default function PageProjects() {
             data-wow-delay="0.6s"
           >
             <Card sx={{ maxWidth: 345 }} className="cardProjects">
-              <CardHeader title="Projeto Integração de API" />
+              <CardHeader title="Projeto Integração de API" style={skillsContainerStyle}/>
               <CardMedia>
                 <img src={imgApi} className="picApi" alt="API" />
               </CardMedia>
-              <CardContent>
+              <CardContent style={skillsContainerStyle}>
                 <div className="descricao">
                   <p>
                     Projeto onde explorei a integração de API (JavaScript, HTML5
@@ -178,7 +187,7 @@ export default function PageProjects() {
                   </p>
                 </div>
               </CardContent>
-              <CardActions disableSpacing>
+              <CardActions disableSpacing style={skillsContainerStyle}>
                 <IconButton
                   aria-label="add to favorites"
                   onClick={changeColorApi}
@@ -203,7 +212,7 @@ export default function PageProjects() {
                 </ExpandMore>
               </CardActions>
               <Collapse in={expandedApi} timeout="auto" unmountOnExit>
-                <CardContent>
+                <CardContent style={skillsContainerStyle}>
                   <Typography paragraph>
                     O projeto foi baseado em uma aplicação 100% responsiva que
                     permite verificar o clima de qualquer cidade, onde utilizei
@@ -231,11 +240,11 @@ export default function PageProjects() {
             data-wow-delay="0.8s"
           >
             <Card sx={{ maxWidth: 345 }} className="cardProjects">
-              <CardHeader title="Projeto CRUD" />
+              <CardHeader title="Projeto CRUD" style={skillsContainerStyle}/>
               <CardMedia>
                 <img src={imgCrud} className="picCrud" alt="CRUD" />
               </CardMedia>
-              <CardContent>
+              <CardContent style={skillsContainerStyle}>
                 <div className="descricao">
                   <p>
                     Gerenciamento de tarefas utilizando CRUD (JavaScript, HTML5,
@@ -243,7 +252,7 @@ export default function PageProjects() {
                   </p>
                 </div>
               </CardContent>
-              <CardActions disableSpacing>
+              <CardActions disableSpacing style={skillsContainerStyle}>
                 <IconButton
                   aria-label="add to favorites"
                   onClick={changeColorCrud}
@@ -268,7 +277,7 @@ export default function PageProjects() {
                 </ExpandMore>
               </CardActions>
               <Collapse in={expandedCrud} timeout="auto" unmountOnExit>
-                <CardContent>
+                <CardContent style={skillsContainerStyle}>
                   <Typography paragraph>
                     Nesse projeto desenvolvi um gerenciamento de tarefas
                     completo, utilizando as funcionalidades do CRUD (Create,
