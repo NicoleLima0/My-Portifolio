@@ -118,7 +118,7 @@ a:hover {
   display: block;
   position: absolute;
   z-index: 2;
-  width: 25px; 
+  width: 25px;
   height: 29px;
   background: white;
   left: -1px;
@@ -130,20 +130,20 @@ a:hover {
   color: #000000;
   white-space: nowrap;
   transition: all cubic-bezier(0.3, 1, 0.7, 1) 0.3s;
-  align-items: center; 
+  align-items: center;
 }
 
 .theme-switch:checked {
   background-color: #ffffff;
   border-color: #ffffff;
-  align-items: center; 
+  align-items: center;
 }
 
 .theme-switch:checked::before {
   left: 23px;
   content: url('../../assets/svg/sun.svg');
-  background:#ffffff;
-  align-items: center; 
+  background: #ffffff;
+  align-items: center;
   display: flex;
   justify-content: center;
 }

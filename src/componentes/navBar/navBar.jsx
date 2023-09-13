@@ -26,16 +26,16 @@ export default function NavBar({ isDarkMode, setIsDarkMode }) {
   return (
     <nav className="nav">
       <div>
-          <input
-            // id={props.id}
-            className="theme-switch"
-            type="checkbox"
-            onChange={(e) => {
-              setIsDarkMode(e.target.checked);
-            }}
-            checked={isDarkMode}
-          />
-        </div>
+        <input
+          // id={props.id}
+          className="theme-switch"
+          type="checkbox"
+          onChange={(e) => {
+            setIsDarkMode(e.target.checked);
+          }}
+          checked={isDarkMode}
+        />
+      </div>
       <ul className={active}>
         <li className="nav__item">
           <a
