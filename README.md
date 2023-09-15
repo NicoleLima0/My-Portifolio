@@ -11,9 +11,8 @@ O Projeto Portfólio é uma aplicação web que permite aos usuários criar e ex
 - Criação de um perfil pessoal com informações como nome, foto, biografia e links para as redes sociais.
 - Adição de projetos ao portfólio, incluindo título, descrição, imagens e links para visualização.
 - Exibição dos projetos em um layout moderno e responsivo.
-- Filtragem e classificação dos projetos por categorias ou tags.
 - Visualização de detalhes de cada projeto, incluindo imagens, descrição completa e links relacionados.
-- Personalização do tema e estilo do portfólio através de opções de CSS customizáveis.
+- Personalização do tema e estilo do portfólio através de opções de CSS customizáveis incluindo Dark Mode.
 
 ## Tecnologias Utilizadas
 
