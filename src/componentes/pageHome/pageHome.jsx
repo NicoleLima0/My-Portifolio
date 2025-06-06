@@ -1,6 +1,6 @@
 import "./pageHome.css";
 import imgProfile from "../../assets/images/Nicole.jpg";
-import React, { useContext } from "react";
+import { useContext } from "react";
 import { useEffect } from "react";
 import WOW from "wow.js";
 import { ThemeContext } from "styled-components";
@@ -37,8 +37,8 @@ export default function PageHome() {
             <div className="title">Oie, meu nome é </div>
             <div className="name">Nicole Carvalho Lima Martins</div>
             <div className="subTitle">
-              Tenho 21 anos e moro em Teresópolis, no Rio de Janeiro.
-              Atualmente, estou no segundo período do curso de Análise e
+              Tenho 23 anos e moro em Teresópolis, no Rio de Janeiro.
+              Atualmente, estou no último período do curso de Análise e
               Desenvolvimento de Sistemas, uma área muito interessante que
               despertou minha paixão pela tecnologia.
               <div className="subTitle2">Desenvolvedora front-end</div>A
